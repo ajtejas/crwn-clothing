@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import "./sign-in.style.scss";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
-// import { auth, signInWithGoogle } from "../../firebase/firebase.util";
 import {
   googleSignInStart,
   emailSignInStart,
@@ -24,13 +23,6 @@ class SignIn extends React.Component {
     const { emailSignInStart } = this.props;
     const { email, password } = this.state;
     emailSignInStart(email, password);
-    // try {
-    //   await auth.signInWithEmailAndPassword(email, password);
-
-    //   this.setState({ email: "", password: "" });
-    // } catch (error) {
-    //   console.error(error);
-    // }
   };
 
   handleChange = (event) => {
