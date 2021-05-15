@@ -7,8 +7,8 @@ import "./collections-overview.style.scss";
 
 const CollectionsOverview = ({ collections }) => (
   <div className="collections-overview">
-    {collections.map(({ id, ...otherCollecitonProps }) => (
-      <CollectionPreview key={id} {...otherCollecitonProps} />
+    {collections.map(({ id, ...otherCollecitonProps }, index) => (
+      <CollectionPreview key={index} {...otherCollecitonProps} />
     ))}
   </div>
 );
